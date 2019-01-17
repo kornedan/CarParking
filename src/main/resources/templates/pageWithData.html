@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Twoje dane do parkingu
+</BR>
+Twój login:</BR>
+<p th:text="${client.getLogin()}"></p>
+</BR>
+Twój nr rejestracyjny:</BR>
+</BR>
+<p th:text="${client.getRegistrationNumber()}"></p>
+</BR>
+Przypisane miejsce parkingowe:
+</BR>
+<p th:text="${client.getParkingSpace()}"></p>
+</BR>
+<a href="/index">Przejdz na strone główną</a>
+</body>
+</html>
