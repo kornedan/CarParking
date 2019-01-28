@@ -9,7 +9,7 @@ import java.sql.SQLException;
 
 
 @Component
-public class ClientService implements ClientServiceInt {
+public class ClientServiceImpl implements IClientService {
 
     public void addToDB(Client client) {
         try {

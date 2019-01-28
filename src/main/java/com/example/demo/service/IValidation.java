@@ -1,6 +1,6 @@
 package com.example.demo.service;
 
-public interface ValidationInt {
+public interface IValidation {
     boolean validationToRegistration(String login);
 
     Integer validationParkingSpace();

@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 @Component
-public class Validation implements ValidationInt {
+public class ValidationImpl implements IValidation {
 
     public boolean validationToRegistration(String login) {
         try {

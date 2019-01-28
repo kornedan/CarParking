@@ -1,17 +1,18 @@
 package com.example.demo.model;
 
 public class Client {
+    private int id;
     private String login;
     private String password;
     private String registrationNumber;
     private Integer parkingSpace;
 
-    public int getParkingSpace() {
-        return parkingSpace;
+    public int getId() {
+        return id;
     }
 
-    public void setParkingSpace(Integer parkingSpace) {
-        this.parkingSpace = parkingSpace;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getLogin() {
@@ -36,5 +37,13 @@ public class Client {
 
     public void setRegistrationNumber(String registrationNumber) {
         this.registrationNumber = registrationNumber;
+    }
+
+    public Integer getParkingSpace() {
+        return parkingSpace;
+    }
+
+    public void setParkingSpace(Integer parkingSpace) {
+        this.parkingSpace = parkingSpace;
     }
 }

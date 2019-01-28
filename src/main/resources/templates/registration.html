@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Registration</title>
@@ -8,19 +8,19 @@
 WITAJ W REJESTRACJI
 </BR>
 </BR>
-<form action="/check" method="get">
+<form th:object="${client}"  method="post">
     Wpisznr rejestracyjny samochodu:</BR>
-    <input type="text" name="registrationNumber" placeholder="registration number">
+    <input type="text" th:field="*{registrationNumber}" placeholder="registration number">
     </BR>
     Wpisz login:</BR>
-    <input type="text" name="login" placeholder="your login">
+    <input type="text" th:field="*{login}" placeholder="your login">
     </BR>
     Wpisz hasło:</BR>
-    <input type="text" name="password" placeholder="your password">
+    <input type="text" th:field="*{password}" placeholder="your password">
     </BR>
     <input type="submit" value=OK>
 </form>
 </BR>
-<a href="/index">Przejdz na strone główną</a>
+<a href="/">Przejdz na strone główną</a>
 </body>
 </html>
