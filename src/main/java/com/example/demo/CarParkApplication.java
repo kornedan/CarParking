@@ -8,7 +8,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class CarParkApplication {
 
     public static void main(String[] args) {
-        DBHandler.connect();
         SpringApplication.run(CarParkApplication.class, args);
     }
 

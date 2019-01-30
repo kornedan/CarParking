@@ -1,7 +1,16 @@
 package com.example.demo.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity(name = "tdata")
 public class Client {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
+
     private String login;
     private String password;
     private String registrationNumber;
@@ -45,5 +54,16 @@ public class Client {
 
     public void setParkingSpace(Integer parkingSpace) {
         this.parkingSpace = parkingSpace;
+    }
+
+    @Override
+    public String toString() {
+        return "Client{" +
+                "id=" + id +
+                ", login='" + login + '\'' +
+                ", password='" + password + '\'' +
+                ", registrationNumber='" + registrationNumber + '\'' +
+                ", parkingSpace=" + parkingSpace +
+                '}';
     }
 }

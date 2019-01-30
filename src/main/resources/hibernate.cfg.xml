@@ -6,15 +6,16 @@
     <session-factory>
         <!-- Database connection setings-->
         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/zoo?useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/rentcardb?useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC</property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password"></property>
         <!--Ecgo SQL-->
         <property name="hibernate.show_sql">true</property>
         <!--SQL Datebase-->
-        <property name="hibernate.dialect">org.hibernate.dialect.MySQL57InnoDBDialect</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
         <!-- Datebase intialize-->
-        <property name="hbm2ddl.auto">create</property>
-        <mapping class="com.company.model.Animal"/>
+        <property name="hbm2ddl.auto">update</property>
+        <!-- &useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC -->
+        <mapping class="com.example.demo.model.Client"/>
     </session-factory>
 </hibernate-configuration>
