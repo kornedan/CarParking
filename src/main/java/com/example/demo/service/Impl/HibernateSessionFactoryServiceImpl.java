@@ -4,7 +4,6 @@ import com.example.demo.service.IHibernateSessionFactoryService;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -17,7 +16,7 @@ public class HibernateSessionFactoryServiceImpl implements IHibernateSessionFact
         this.sessionFactory = new Configuration().configure().buildSessionFactory();
     }
 
-    public Session getSession(){
+    public Session getSession() {
         return this.sessionFactory.openSession();
     }
 }
